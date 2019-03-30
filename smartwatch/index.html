@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+</head>
+
+<style>
+body
+{
+	background: white;
+	font-family: 'Open Sans', sans-serif;
+	margin-left:18.5%;
+	margin-top:0%;
+}
+
+.power_btn
+{
+	background: #333;
+    border-radius: 999em;
+    margin-left: 135px;
+    font-size: 25px;
+    padding: 16px 20px 16px 20px;
+    outline: none;
+    border: none;
+    -webkit-text-stroke: 2px #333;
+}
+
+#poweron
+{
+	color:#FFF;
+ 	box-shadow: -2px -2px 10px rgba(0,0,0,.25) inset, 0px 3px 10px #666 inset;
+}
+
+#poweroff
+{
+ 	color: #FF6D6D;
+ 	box-shadow: -2px -2px 10px rgba(0,0,0,.25) inset, 0px 3px 10px #222 inset;
+}
+
+#poweron:hover, #poweroff:hover
+{
+	cursor: pointer;
+	/*background: #333;
+ 	border: 2px solid #333;
+ 	color: #FF6D6D;
+ 	-webkit-text-stroke: 2px #333;*/
+}
+
+figure
+{
+	margin-left: 0px;
+    box-shadow: 0px 19px 38px rgba(33, 33, 33, 0.5), 0px 15px 12px rgba(34, 34, 34, 0.25);
+    width: 325px;
+    height: 390px;
+    border-radius: 40px;
+}
+
+.case
+{
+	border-radius: 40px;
+    /* margin-left: 38%; */
+    /* margin-top: 20%; */
+    width: 315px;
+    height: 380px;
+    padding: 10px 0px 2.5px 10px;
+    /*border: 2px solid #333;*/
+    background: #333;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #333, #222);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #333, #222); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    /*box-shadow: -2px -2px 10px rgba(0,0,0,.25) inset, 2px 2px 10px white inset;*/
+    box-shadow: -2px -2px 10px rgba(0,0,0,.25) inset, 0px 2px 10px white inset;
+}
+
+.box
+{
+	margin-top: -100px;
+	border: 1px solid #212121;
+    width: 282px;
+    height: 350px;
+    padding: 10px;
+    border-radius: 30px;
+    background:#212121;
+    box-shadow: -2px -2px 10px rgba(0,0,0,.25) inset, 0px 3px 10px #666 inset;
+}
+
+.screen
+{
+	margin-left:5px;
+	margin-top:7px;
+	border-radius: 30px;
+    background: #212121;
+    width: 272px;
+    height: 340px;
+}
+
+.page
+{
+	border-radius: 20px;
+	background:#212121;
+	width:272px;
+	height:340px;
+	color:#fff;
+	outline: none;
+}
+
+#time
+{
+	/*background-image: url("css/images/wallpaper2.jpg");*/
+}
+
+#weekday
+{
+	float: left;
+	margin-left: 20px;
+	margin-top: -95px;
+	font-weight: 100;
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 0px;
+}
+
+#year
+{
+	display: inline-block;
+    font-weight: 100;
+    font-size: 15px;
+    text-align: center;
+    margin: 0px;
+    position: relative;
+    top: 5px;
+    padding-right: 5px;
+}
+
+.time-footer
+{
+	margin-left: 10px;
+    width: 100%;
+    /* padding-left: 5px; */
+    margin-top: 30px;
+}
+
+#clock
+{
+	color: #FF6D6D;
+	font-size: 50px;
+	margin-top:0px;
+	font-weight: 300;
+}
+
+#random_quote
+{
+	height: 75px;
+	text-align: left;
+    padding-left: 20px;
+    /*padding-right: 30px;*/
+    margin-top: 15px;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.time-wrapper
+{
+/*	position: absolute;
+    bottom: 10px;
+    text-align: right;
+    left: 125px;*/
+    text-align: right;
+    margin-top: 7%;
+    margin-right: 20px;
+}
+
+.weather-wrapper
+{
+	padding-top:30px;
+}
+
+.watchswitch
+{
+	left: 165px;
+    margin-left: 7%;
+    /* border: 2px solid #333; */
+    background: #333;
+    width: 135px;
+    height: 100px;
+    z-index: -131;
+    position: relative;
+    top: 100px;
+    border-radius: 20px;
+    box-shadow: -2px -2px 10px rgba(0,0,0,.25) inset, 2px 2px 10px white inset;
+}
+
+.stopwatch-wrapper
+{
+	border: 2px dashed #ff6d6d;
+    border-radius: 999em;
+    /*width: 250px;*/
+    width: 248.5px;
+    margin-left: 10px;
+    height: 250px;
+    margin-top: 15%;
+}
+
+.stopwatch-time
+{
+	text-align: center;
+    font-size: 45px;
+    font-weight: 300;
+    margin-top: 30%;
+}
+
+.stopwatch-btns
+{
+	margin-left: 100px;
+}
+
+.circle-btn
+{
+	margin-top: -10px;
+	outline: none;
+    background: transparent;
+    font-family: 'Open Sans', sans-serif;
+    
+    border-radius: 999em;
+    /* padding: 10px; */
+    width: 50px;
+    font-weight: bold;
+    height: 50px;
+    text-align: center;
+    transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -webkit-transition: background .2s ease-in-out;
+}
+
+.start-btn
+{
+	border: 2px solid #8BC34A;
+    color: #8BC34A;
+}
+
+.start-btn:hover
+{
+	cursor:pointer;
+	background: #8BC34A;
+	color: #212121;
+}
+
+.stop-btn
+{
+	border: 2px solid #FF6D6D;
+    color: #FF6D6D;
+}
+
+.stop-btn:hover
+{
+	cursor:pointer;
+	background: #FF6D6D;
+	color: #212121;
+}
+
+.reset-btn
+{
+	outline: none;
+	float: right;
+    text-align: center;
+    font-size: 15px;
+    color: lightgrey;
+    background: transparent;
+    border: 2px solid lightgrey;
+    margin-top: 35px;
+    width: 40px;
+    height: 40px;
+    border-radius: 999em;
+    transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -webkit-transition: background .2s ease-in-out;
+}
+
+.reset-btn:hover
+{
+	cursor:pointer;
+	background: lightgrey;
+	color: #212121;
+}
+
+#calc-wrapper
+{
+	padding-top:10px;
+}
+
+.calc-border
+{
+	border-style: solid;
+	border-color: #FF6D6D;
+	width:90%;
+}
+
+.btn
+{
+    width: 23%;
+    height: 60px;
+    border: none;
+    background: transparent;
+    border-radius: 999em;
+    color: white;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 5px;
+    outline: none;
+    text-align: center;
+    transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -webkit-transition: background .2s ease-in-out;
+}
+
+.btn-clear
+{
+	color: lightgrey;
+	width: 10%;
+    height: 35px;
+    margin-bottom: 5px;
+    transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -webkit-transition: background .2s ease-in-out;
+}
+
+.btn:hover
+{
+	cursor: pointer;
+	background: #FF6D6D;
+	color: #FFF;
+}
+
+.btn-clear:hover
+{
+	color:#FF6D6D;
+	background: none;
+}
+
+.digi-screen
+{
+	height: 50px;
+    text-align: right;
+    margin-bottom: -10px;
+    margin-top: 5px;
+    width: 75%;
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+}
+
+#music_player
+{
+	background: linear-gradient(to bottom, #212121 0%,#212121 50%,#ffffff 50%,#ffffff 100%);
+}
+
+.mp3_img
+{
+	border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.mp3_controls
+{
+	text-align: center;
+}
+
+.mp3_btn
+{
+	border: none;
+    border-radius: 999em;
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+    color: #212121;
+    background: transparent;
+    outline: none;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -webkit-transition: background .2s ease-in-out;
+}
+
+.mp3_btn:hover
+{
+	cursor: pointer;
+	background: #212121;
+	color:white;
+}
+
+.mp3_name
+{
+	position: relative;
+    color: black;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    margin-bottom: -5px;
+    top: -5px;
+}
+
+.mp3_volume
+{
+	padding-left: 20px;
+    padding-right: 20px;
+}
+
+#tracker{
+	padding-left:10px;
+	position:relative;
+	width:100%;
+	margin-bottom: 0px;
+	margin-top: 5px;
+}
+ 
+#progress-bar{
+	width:90%;
+	margin-left:2%;
+	margin-right:2%;
+	margin-bottom:20px;
+	margin-top:9px;
+	height:5px;
+	border-radius: 0px;
+	background:#212121;
+	float:left;
+}
+ 
+#progress{
+	position: relative;
+    background: #ff6d6d;
+    height: 5px;
+    border-radius: 0px;
+    display: inline-block;
+    top: -12px;
+}
+ 
+#duration{
+	position:absolute;
+	top:0;
+	right:10px;
+	padding: 4px 8px;
+	background:#000;
+	border-radius:5px;
+}
+
+.soundicon
+{
+	color: lightgrey;
+}
+
+input#volume{
+	width:83%;
+	-webkit-appearance:none !important;
+	background:lightgrey;
+	height:2px;
+	margin-bottom:20px;
+	position: relative;
+	top: -5px;
+	outline:none;
+}
+
+input#volume::-webkit-slider-thumb{
+	-webkit-appearance:none !important;
+	background:#212121;
+	height:12px;
+	width:12px;
+	border-radius: 999em;
+	outline:none;
+}
+
+#songTitle
+{
+	color: #212121;
+	margin: 0px;
+	margin-bottom: 5px;
+}
+
+#songArtist
+{
+	color: #FF6D6D;
+	margin: 0px;
+}
+
+.simongame-wrapper
+{
+    margin-top: 0px;
+}
+
+.simonbox
+{
+	margin: 5px;
+    display: inline-block;
+    border: 2px solid white;
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+.simonbox:hover
+{
+	cursor: pointer;
+}
+
+.simongame-title
+{
+	font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 5px;
+    position: relative;
+    top: -10px;
+}
+
+#simongame_start_btn, #simongame_stop_btn
+{
+	outline: none;
+	border: 2px solid lightgrey;
+    background: transparent;
+    color: lightgrey;
+    font-family: 'Open Sans', sans-serif;
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+    position: relative;
+    top: 10px;
+    font-weight: bold;
+    transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -webkit-transition: background .2s ease-in-out;
+}
+
+#simongame_start_btn:hover, #simongame_stop_btn:hover
+{
+	cursor: pointer;
+	background: lightgrey;
+	color:#212121;
+}
+
+#bluebox
+{
+	border-color:#00BCD4;
+}
+
+#yellowbox
+{
+	border-color:#FFEB3B;
+}
+
+#redbox
+{
+	border-color:#F44336;
+}
+
+#greenbox
+{
+	border-color:#8BC34A;
+}
+
+#clickNumber
+{
+	margin-top: -14px;
+    margin-bottom: -10px;
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    border-radius: 999em;
+    font-size: 13px;
+    text-align: center;
+    color: lightgray;
+    font-family: 'Open Sans', sans-serif;
+    border: 2px solid;
+    font-weight: bold;
+}
+</style>
+
+<body>
+	
+	<figure>
+	<div class="case">
+		<div class="watchswitch"></div>
+		<div class="box">
+			<div class="screen">
+
+				<!-- Menu -->
+				<!-- <div id="main_menu" class="page">
+					<div class="main_menu_wrapper">
+						<a href="#" data-slide="2">go to slide 3</a>
+					    <a href="#" data-slide="3">go to slide 4</a>
+					    <a href="#" data-slide="4">go to slide 5</a>
+					</div>
+				</div> -->
+
+				<!-- Time -->
+				<div id="time" class="page">
+					<div class="time-wrapper">
+						<h1 id="clock"></h1>
+						<h3 id="weekday"></h3>
+						<div class="time-quote">
+						<h4 style="margin: 0px;float: left;margin-left: 20px;font-family: 'Open Sans', sans-serif;font-weight: 400;color: #FF6D6D;">Quote of the day:</h4>
+						<br>
+						<h5 id="random_quote"></h5>
+						</div>
+						<div class="time-footer">
+							<div id="weatherTemp2" style="position: relative;display: inline-block;left: -120px;color:#FF6D6D;"></div>
+							<!-- <i style="font-size: 30px;float: left;position: relative;top: 10px;left: -50px;" class="fa fa-clock-o"></i> -->
+							<i style="font-size: 30px;display: inline-block;position: relative;left: -65px;color:#FFF;" class="fa fa-clock-o"></i>
+							<h4 id="year"></h4>
+						</div>
+					</div>
+				</div>
+				<!-- /Time -->
+
+				<!-- Weather -->
+				<div id="weather" class="page">
+					<div class="weather-wrapper">
+						<!-- Weather Icon -->
+						<div id="weatherIcon" style="margin-bottom: -30px;"></div>
+
+						<!-- weather temp -->
+						<div id="weatherTemp"></div>
+
+						<!-- Weather city + region -->
+						<div id="weatherCity"></div>
+
+						<!-- weather condition -->
+						<div id="weatherCond"></div>
+
+						<!-- weather high-low -->
+						<div style="margin-top:-10px;" id="weatherHighLow"></div>
+					</div>
+				</div>
+				<!-- /Weather -->
+
+				<!-- Music Player -->
+				<div id="music_player" class="page">
+					<div class="mp3_wrapper">
+						<img class="mp3_img">
+
+						<div id="tracker">
+							<div id="progress-bar">
+								<span id="progress"></span>
+							</div>
+							<!-- <span id="duration"></span> -->
+						</div>
+
+						<div class="mp3_name">
+							<h4 id="songTitle"></h4>
+							<h5 id="songArtist"></h5>
+						</div>
+
+						<div class="mp3_controls">
+							<button id="prevSong" class="mp3_btn"><i class="fa fa-fast-backward" aria-hidden="true"></i></button>
+							<button id="playSong" class="mp3_btn"><i class="fa fa-play" aria-hidden="true"></i></button>
+							<button id="pauseSong"  style="display:none;" class="mp3_btn"><i class="fa fa-pause" aria-hidden="true"></i></button>
+							<button id="nextSong" class="mp3_btn"><i class="fa fa-fast-forward" aria-hidden="true"></i></button>
+						</div>
+
+						<div class="mp3_volume">
+							<i class="fa fa-volume-down soundicon" aria-hidden="true"></i>
+							<input id="volume" type="range" min="0" max="10" value="5">
+							<i class="fa fa-volume-up soundicon" aria-hidden="true"></i>
+						</div>
+					</div>
+				</div>
+				<!-- /Music Player -->
+
+				<!-- Stopwatch -->
+				<div id="stopwatch" class="page">
+					<div class="stopwatch-wrapper">
+						<!-- <h2 class="stopwatch-time">00 : 00 : 00</h2> -->
+						<h2 id="stopwatch-time" class="stopwatch-time">00:00:00</h2>
+						<div class="stopwatch-btns">
+							<button id="start-btn" class="circle-btn start-btn"><i class="fa fa-play" aria-hidden="true"></i></button>
+							<button style="display:none;" id="stop-btn" class="circle-btn stop-btn"><i class="fa fa-stop" aria-hidden="true"></i></button>
+							<!-- <button id="start-btn" class="circle-btn start-btn">Start</button> -->
+<!-- 							<button>Stop</button>
+							<button>Reset</button> -->
+						</div>
+						<button id="reset-btn" class="reset-btn"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+					</div>
+				</div>
+				<!-- /Stopwatch -->
+
+				<!-- Calculator -->
+				<div id="calculator" class="page">
+					<div id="calc-wrapper">
+						<form class="calculator" name="calc" style="text-align:center;">
+
+							<input class="btn btn-clear" type="button" value="C">
+							<input class="digi-screen" type="text" id="display" style="text-align:right;" disabled="disabled">
+							<hr class="calc-border"/>
+
+							<div class="row">
+								<input class="btn btn-reg" type="button" value="7">
+								<input class="btn btn-reg"  type="button" value="8">
+								<input class="btn btn-reg"  type="button" value="9">
+								<input class="btn btn-op"  type="button" value="+">
+							</div>
+							<div class="row">
+								<input class="btn btn-reg"  type="button" value="4">
+								<input class="btn btn-reg"  type="button" value="5">
+								<input class="btn btn-reg"  type="button" value="6">
+								<input class="btn btn-op"  type="button" value="-">
+							</div>
+							<div class="row">
+								<input class="btn btn-reg"  type="button" value="1">
+								<input class="btn btn-reg"  type="button" value="2">
+								<input class="btn btn-reg"  type="button" value="3">
+								<input class="btn btn-op"  type="button" value="*">
+							</div>
+							<div class="row">
+								<input class="btn btn-op"  type="button" value=".">
+								<input class="btn btn-reg"  type="button" value="0">
+								<input class="btn btn-eq"  type="button" value="=">
+								<input class="btn btn-op"  type="button" value="/">
+							</div>
+
+						</form>
+					</div>
+				</div>
+				<!-- /Calculator -->
+
+				<!-- simon game -->
+				<div id="simongame" class="page">
+					<center>
+						<div class="simongame-wrapper">
+							<div>
+								<h3 class="simongame-title">Simon Game</h3>
+							</div>
+							<div class="row">
+								<div class="simonbox" id="bluebox"></div>
+								<div class="simonbox" id="yellowbox"></div>
+							</div>
+							<div id="clickNumber"></div>
+							<div class="row">
+								<div class="simonbox" id="redbox"></div>
+								<div class="simonbox" id="greenbox"></div>
+							</div>
+							<button id="simongame_start_btn">Play Game</button>
+							<button style="display:none;" id="simongame_stop_btn">End Game</button>
+						</div>
+					</center>
+				</div>
+				<!-- /simon game -->
+
+			</div>
+		</div>
+	</div>
+</figure>
+	<br>
+	<button id="poweron" class="power_btn"><i class="fa fa-power-off" aria-hidden="true"></i></button>
+	<button id="poweroff" class="power_btn"><i class="fa fa-power-off" aria-hidden="true"></i></button>
+	<!-- <h3 style="margin-left:100px;">smart_watch.js</h3> -->
+</body>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js" type="text/javascript"></script>
+
+  <!-- Clock script -->
+  <script>
+		function startTime() {
+		    var today = new Date();
+		    var h = today.getHours();
+		    var m = today.getMinutes();
+		    var s = today.getSeconds();
+		    m = checkTime(m);
+		    s = checkTime(s);
+		    // document.getElementById('clock').innerHTML =
+		    // h + ":" + m + ":" + s;
+		    document.getElementById('clock').innerHTML = h + ":" + m;
+		    var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+		    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+		    return i;
+		}
+
+		function displayDate()
+		{
+			var todayDate = new Date();
+
+			var monthNames = [
+			    "JAN", "FEB", "MAR",
+			    "APR", "MAY", "JUN", "JUL",
+			    "AUG", "SEP", "OCT",
+			    "NOV", "DEC"
+			  ];
+
+			var weekday = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'][todayDate.getDay()];
+			var day = todayDate.getDate();
+
+			if(day < 10)
+			{
+				day = "0" + day;
+			}
+
+			var monthIndex = todayDate.getMonth();
+			var year = todayDate.getFullYear();
+
+			document.getElementById("weekday").innerHTML = "<span style='color:#FF6D6D;font-weight: normal;font-size:15px;'>" + weekday + "</span>" + "<br>" + day;
+			document.getElementById("year").innerHTML = "<span style='color:#FF6D6D;font-weight: normal;font-size:20px;'>" + monthNames[monthIndex] + "</span>" + "<br>" + year;
+		}
+
+		startTime();
+		displayDate();
+	</script>
+
+	<!-- Random quote -->
+	<script>
+		function genQuote() {
+		  var randNum = Math.floor(Math.random() * 5) + 1;
+		  document.getElementById('random_quote').innerHTML = quotes[randNum];
+		}
+
+		//quote array
+		var quotes = ["\"Either I will find a way, or I will make one.\"<br> - Philip Sidney", "\"Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.\"<br>- Thomas A. Edison", "\"You are never too old to set another goal or to dream a new dream.\"<br>- C.S Lewis", "\"If you can dream it, you can do it.\"<br>- Walt Disney", "\"Never give up, for that is just the place and time that the tide will turn.\"<br>- Harriet Beecher Stowe", "\"I know where I'm going and I know the truth, and I don't have to be what you want me to be. I'm free to be what I want.\"<br>- Muhammad Ali"];
+
+		genQuote();
+	</script>
+
+	<!-- Weather app script -->
+	<script>
+		if("geolocation" in navigator)
+		{
+			navigator.geolocation.getCurrentPosition(function(position){
+				loadWeather(position.coords.latitude + ',' + position.coords.longitude);
+			});
+		}
+
+		$(document).ready(function(){
+			loadWeather('Seattle', '');
+		});
+
+		function loadWeather(location, woeid)
+		{
+			$.simpleWeather({
+				location: location,
+				woeid: woeid,
+				unit: 'c',
+				success: function(weather)
+				{
+					weather_icon = '<img style="filter: invert(100%);" src="weathericons/' + weather.code + '.svg"/>';
+					
+					weather_temp = '<h2 style="margin-left:30px;margin-top:10px;font-size:75px;font-weight:100;">' + weather.temp+'&deg;' + '</h2>';
+
+					weather_temp2= '<h4 style="margin-left: -50px;margin-top: 10px;font-size: 30px;font-weight: 100;">' + weather.temp+'&deg;' + '</h4>';
+
+					weather_city = '<h2 style="margin-left:30px;margin-top:-60px;font-weight:300;">' + weather.city + '</h4>';
+
+					weather_cond = '<h2 style="margin-left:30px;font-weight: 300;color: #ff6d6d;margin-top: -15px;">' + weather.currently + '</h2>';
+
+					weather_highlow = '<h3 style="color:lightgrey;display:inline-block;margin-left:30px;font-weight: 300;margin-top: -10px;">H: ' + weather.high + '</h3>' +
+					'<h3 style="color:lightgrey;display:inline-block;margin-left:20px;font-weight: 300;margin-top: -10px;">L: ' + weather.low + '</h3>';
+
+					$("#weatherIcon").html(weather_icon);
+					$("#weatherTemp").html(weather_temp);
+					$("#weatherTemp2").html(weather_temp2);
+					$("#weatherCity").html(weather_city);
+					$("#weatherCond").html(weather_cond);
+					$("#weatherHighLow").html(weather_highlow);
+				},
+				error: function(error)
+				{
+					alert(errormessage.responseText);
+				}
+			});
+		}
+	</script>
+
+	<!-- Stopwatch script -->
+	<script>
+		var seconds = 0;
+		var minutes = 0;
+		var hours = 0;
+		var time_interval;
+		var is_start = false;
+
+		//Counter
+		function counter()
+		{
+			seconds++;
+			if(seconds >= 60)
+			{
+				seconds = 0;
+				minutes++;
+				if(minutes >= 60)
+				{
+					minutes = 0;
+					hours++;
+				}
+			}
+
+			var stopwatch_time = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+			$("#stopwatch-time").html(stopwatch_time);
+		}
+
+		//Interval
+		function timer()
+		{
+			time_interval = setInterval(counter, 1000);
+		}
+
+		$("#start-btn").click(function(e){
+			// alert('start');
+			timer();
+			//hide this button
+			$(this).css({"display" : "none"});
+			$("#stop-btn").css({"display" : "block"});
+			is_start = true;
+		});
+
+		$("#stop-btn").click(function(e){
+			// alert('stop');
+			clearInterval(time_interval);
+			//hide this button
+			$(this).css({"display" : "none"});
+			$("#start-btn").css({"display" : "block"});
+			is_start = false;		
+		});
+
+		$("#reset-btn").click(function(e){
+			seconds = 0;
+			minutes = 0;
+			hours = 0;
+			clearInterval(time_interval);
+			$("#stopwatch-time").html("00:00:00");
+
+			if(is_start)
+			{
+				$("#stop-btn").css({"display" : "none"});
+				$("#start-btn").css({"display" : "block"});
+			}
+		});
+	</script>
+
+	<!-- Calculator script -->
+	<script>
+		$(".btn-reg").click(function (e){
+			// alert($(this).val());
+			document.getElementById("display").value += $(this).val();
+		});
+
+		$(".btn-op").click(function (e){
+			// alert($(this).val());
+			document.getElementById("display").value += $(this).val();
+		});
+
+		$(".btn-eq").click(function (e){
+			var calc = document.getElementById("display").value;
+			document.getElementById("display").value = eval(calc);
+		});
+
+		$(".btn-clear").click(function (e){
+			document.getElementById("display").value = '';
+		});
+	</script>
+
+	<!-- MP3 player script -->
+	<script>
+		var pos = 0;
+		var songs = 
+		[
+			{
+				"song_title" : "True Love",
+				"song_artist" : "Coldplay",
+				"album_art" : "media/images/TrueLove.jpg",
+				"song_file" : "media/music/Coldplay - True Love.mp3" 
+			},
+			{
+				"song_title" : "A Sky Full Of Stars",
+				"song_artist" : "Coldplay",
+				"album_art" : "media/images/ASkyFullOfStars.jpg",
+				"song_file" : "media/music/Coldplay -  A Sky Full Of Stars.mp3" 
+			}
+		];
+
+		//Init
+		$('.mp3_img').prop('src', songs[pos].album_art);
+		$("#songTitle").html(songs[pos].song_title);
+		$("#songArtist").html(songs[pos].song_artist);
+		var audio = new Audio(songs[pos].song_file);
+
+		//Play button
+		$('#playSong').click(function(){
+			play();
+		});
+
+		//Pause button
+		$('#pauseSong').click(function(){
+			pause();
+		});
+
+		//Previous button
+		$("#prevSong").click(function(){
+			stop();
+
+			if(pos-1 < 0)
+			{
+				pos = songs.length-1;
+			}
+			else
+			{
+				pos--;
+			}
+
+			$('.mp3_img').prop('src', songs[pos].album_art);
+			$("#songTitle").html(songs[pos].song_title);
+			$("#songArtist").html(songs[pos].song_artist);
+		 	audio = new Audio(songs[pos].song_file);
+		 	play();
+		});
+
+		//Next button
+		$("#nextSong").click(function(){
+			stop();
+
+			if(pos+1 > songs.length-1)
+			{
+				pos = 0;
+			}
+			else
+			{
+				pos++;
+			}
+
+			$('.mp3_img').prop('src', songs[pos].album_art);
+			$("#songTitle").html(songs[pos].song_title);
+			$("#songArtist").html(songs[pos].song_artist);
+		 	audio = new Audio(songs[pos].song_file);
+		 	play();
+		});
+
+		$('#volume').change(function(){
+			audio.volume = parseFloat(this.value / 10);
+		});
+
+		//Time/Duration
+		function showDuration(){
+			$(audio).bind('timeupdate',function(){
+				//Get hours and minutes
+				var s = parseInt(audio.currentTime % 60);
+				var m = parseInt(audio.currentTime / 60) % 60;
+				if(s < 10){
+					s = '0'+s;
+				}
+				$('#duration').html(m + ':'+ s);
+				var value = 0;
+				if(audio.currentTime > 0){
+					value = Math.floor((100 / audio.duration) * audio.currentTime);
+				}
+				$('#progress').css('width',value+'%');
+			});
+		}
+
+		function play()
+		{
+			audio.play();
+			$('#playSong').hide();
+			$('#pauseSong').show();
+			showDuration();
+		}
+
+		function pause()
+		{
+			audio.pause();
+			$('#playSong').show();
+			$('#pauseSong').hide();
+		}
+
+		function stop()
+		{
+			audio.pause();
+			audio.currentTime = 0;
+		}
+	</script>
+
+	<!-- simon game -->
+	<script>
+		var game = {
+		  count: 0,
+		  possibilities: ['#greenbox','#bluebox', '#redbox', '#yellowbox'],
+		  currentGame: [],
+		  player: [],
+		  sound:{
+		    blue: new Audio('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3'), 
+		    red: new Audio('https://s3.amazonaws.com/freecodecamp/simonSound2.mp3'), 
+		    yellow: new Audio('https://s3.amazonaws.com/freecodecamp/simonSound3.mp3'), 
+		    green: new Audio('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3')
+		  },
+		  strict: true
+		}
+
+		function addCount() {
+		  game.count++;
+		  $('#clickNumber').addClass('animated fadeOutDown');
+		  setTimeout(function(){
+		    $('#clickNumber').removeClass('fadeOutDown').html(game.count).addClass('fadeInDown');
+		  }, 200);
+		  generateMove();
+		}
+
+		function nextLevel() {
+		  addCount();
+		}
+
+		function generateMove(){
+		  game.currentGame.push(game.possibilities[(Math.floor(Math.random()*4))]);
+		  showMoves();
+		}
+		
+		function clearGame() {
+		  game.currentGame = [];
+		  game.count = 0;
+		  addCount();
+		}
+
+		function newGame() {
+		  clearGame();
+		}
+
+		function showMoves() {
+		  var i = 0;
+		  var moves = setInterval(function(){
+		    playGame(game.currentGame[i]);
+		    i++;
+		    if (i >= game.currentGame.length) {
+		      clearInterval(moves);
+		    }
+		  }, 600)
+		  
+		  clearPlayer();
+		}
+
+		function sound(name) {
+		  switch(name) {
+		    case'#greenbox':
+		      game.sound.green.play();
+		      break;
+		    case '#bluebox':
+		      game.sound.blue.play();
+		      break;
+		    case '#redbox':
+		      game.sound.red.play();
+		      break;
+		    case '#yellowbox':
+		      game.sound.yellow.play();
+		      break;
+		  };
+		}
+
+		function playGame(field) {
+
+			switch(field) {
+		    case'#greenbox':
+		      $(field).css({"background" : "#8BC34A"});
+		      break;
+		    case '#bluebox':
+		      $(field).css({"background" : "#00BCD4"});
+		      break;
+		    case '#redbox':
+		      $(field).css({"background" : "#F44336"});
+		      break;
+		    case '#yellowbox':
+		      $(field).css({"background" : "#FFEB3B"});
+		      break;
+		  };
+
+		  sound(field);
+
+		  setTimeout(function(){
+		      $(field).css({"background" : "#212121"});
+		  }, 300);
+		}
+
+		function clearPlayer() {
+		  game.player = [];
+		}
+
+		function playerTurn(x) {
+		  //Check the color name of the last click
+		  if(game.player[game.player.length - 1] !== game.currentGame[game.player.length - 1]) 
+		  {
+			    if(game.strict)
+			    {
+			      alert('Game Over!');
+			      newGame();
+			    } 
+			    else 
+			    {
+			      alert('Wrong move! Try again!');
+			      showMoves();
+			    }
+		   } 
+		   else 
+		   {
+		   	 	  playGame(x);
+			      // console.log('Good Move!');
+			      var check = game.player.length === game.currentGame.length;
+			      if (check) 
+			      {
+			        if(game.count == 20)
+			        {
+			          alert('You won! Congrats.');
+			      	} 
+				    else 
+				    {
+				       // alert('Next round!');
+				       setTimeout(function(){
+					   nextLevel()}, 300);
+				    }
+			     }
+		    }
+		} 
+
+		$(".simonbox").click(function(){
+			var field = "#" + this.id;
+			game.player.push(field);
+			playerTurn(field);
+		});
+
+		$("#simongame_start_btn").click(function(){
+			$("#simongame_start_btn").hide();
+			$("#simongame_stop_btn").show();
+			newGame();
+		});
+
+		$("#simongame_stop_btn").click(function(){
+			$("#simongame_stop_btn").hide();
+			$("#simongame_start_btn").show();
+			game.currentGame = [];
+		  	game.count = 0;
+		  	$('#clickNumber').html(game.count);
+		});
+	</script>
+
+<!-- Slick Slider -->
+<script type="text/javascript">
+    $(document).ready(function(){
+      $('.screen').slick({
+        	dots: false,
+		  infinite: false,
+		  prevArrow: false,
+		  nextArrow: false,
+		  speed: 400,
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  responsive: [
+		    {
+		      breakpoint: 1024,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1,
+		        infinite: false,
+		        dots: false
+		      }
+		    },
+		    {
+		      breakpoint: 600,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1
+		      }
+		    },
+		    {
+		      breakpoint: 480,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1
+		      }
+		    }
+		    // You can unslick at a given breakpoint now by adding:
+		    // settings: "unslick"
+		    // instead of a settings object
+		  ]
+      });
+    });
+
+  //   $('a[data-slide]').click(function(e) {
+	 //   e.preventDefault();
+	 //   var slideno = $(this).data('slide');
+	 //   $('.screen').slick('slickGoTo', slideno - 1);
+	 // });
+  </script>
+
+  <!-- Power on/off -->
+  <script>
+  		$(".screen").css({"opacity" : "0"});
+  		$("#poweroff").hide();
+
+  		$("#poweron").click(function(){
+  			$(".screen").fadeTo(500, 1);
+  			$("#poweron").hide();
+  			$("#poweroff").show();
+  		});
+
+  		$("#poweroff").click(function(){
+  			$(".screen").fadeTo(500, 0);
+  			$("#poweroff").hide();
+  			$("#poweron").show();
+  		});
+  </script>
+</html>

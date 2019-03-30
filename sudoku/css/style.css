@@ -1,0 +1,72 @@
+#sudokusolver
+{
+  margin-bottom: 20px;
+}
+
+table.grid
+{
+    border-spacing: 0px;
+    width: 100%;
+}
+
+table>tbody>tr>td.cell
+{
+    /*padding:0px;*/
+    padding:2px;
+}
+
+.grid tr td:hover
+{
+	cursor: pointer;
+	background-color: #FAFAFA !important;
+}
+
+.grid tr:nth-child(even) {
+    /*background: #f4f4f4;*/
+    background: #FAFAFA;
+}
+
+table>tbody>tr>td.cell>.input_cell
+{
+    font-weight:600;
+    border:none;
+    text-align: center;
+    font-size:15px !important;
+    height:50px;
+    width:50px;
+    transition: 0.3s all ease;
+    outline: none;
+}
+table>tbody>tr>td.cell>.input_cell:hover
+{
+    cursor:pointer;
+    background-color:#FF5A5F !important;
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+      table>tbody>tr>td.cell>.input_cell
+      {
+          height:25px;
+          width:25px;
+      }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+      table>tbody>tr>td.cell>.input_cell
+      {
+          height:25px;
+          width:25px;
+      }
+}

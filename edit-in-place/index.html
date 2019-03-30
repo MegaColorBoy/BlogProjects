@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html style="overflow: hidden;">
+
+<head>
+	<link href="https://meyerweb.com/eric/tools/css/reset/reset.css" type="text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+	<link href="style.css" type="text/css" rel="stylesheet"/>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+	<style>
+		.editHover
+		{
+		    cursor: pointer;
+		    padding: 10px;
+		    border-radius: 4px;
+		    transition: all 0.3s ease;
+		    border: 1px solid rgb(255, 180, 0);
+		    background: rgba(255, 180, 0, 0.4);
+		    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+		}
+
+		input[type='text'], textarea
+		{
+			box-sizing: border-box;
+		    width: 100%;
+		    border: 1px solid rgba(0,0,0,.09);
+		    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+		    border-radius: 4px;
+		    margin-bottom: 5px;
+		    margin-top: 5px;
+		    outline: none;
+		    padding: 10px;
+		}
+
+		textarea
+		{
+			height: 80px;
+		}
+
+		label
+		{
+			font-size:13px;
+			font-weight: 500;
+			color: #484848;
+		}
+
+		button
+		{
+		    background: white;
+		    border: 1px solid #ff5a5f;
+		    border-radius: 4px;
+		    padding: 2px 6px 2px 6px;
+		    font-family: 'Poppins', sans-serif;
+		    margin: -5px 0px 5px 0px;
+		    font-size: 11px;
+		    outline: none;
+		    transition: .3s ease-in-out;
+			cursor: pointer;
+		}
+
+		.saveEdit
+		{
+			color: #008489;
+			border-color: #008489;
+		}
+
+		.saveEdit:hover
+		{
+			background: #008489;
+			color: white;
+		}
+
+		.cancelEdit
+		{
+			color: #ff5a5f;
+			border-color: #ff5a5f;
+		}
+
+		.cancelEdit:hover
+		{
+			background: #ff5a5f;
+			color: white;
+		}
+	</style>
+</head>
+
+
+<body>
+	<div class="travel-card-body">
+		<div class="travel-card-logo">
+			<img class="icon-logo" src="icons/boy.svg"/>
+			<h2>megacolorboy</h2>
+			<p style="color:#565a5c;">abdush shakoor</p>
+			<p>a passionate engineer with a dash of curiosity, who likes to solve problems and build stuff for fun.</p>
+		</div>
+
+		<hr class="travel-card-hr" />
+
+		<div id="gen-text"></div>
+
+		<hr class="travel-card-hr" />
+
+		<div class="travel-card-logo">
+			<img style="margin-bottom: 20px;" class="icon-logo" src="icons/like.svg"/>
+			<p style="font-size:9px;color:#ced1cc;">&copy; megacolorboy 2018</p>
+		</div>
+
+	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>

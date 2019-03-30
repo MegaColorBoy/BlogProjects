@@ -1,0 +1,72 @@
+.box
+{
+	margin-top:10px;
+	margin-bottom: 20px;
+	background-color: #f3f3f3;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+.box textarea
+{
+	border-radius: 5px;
+	border: none;
+	width: 100%;
+	font-family: 'FiraMono', monospace;
+	padding: 10px;
+	resize: none;
+	outline: none;
+}
+
+.boxitem
+{
+	margin-bottom: 10px;
+}
+
+.boxitem label
+{
+	display: block;
+	font-size: 13px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.box_buttons
+{
+	display: flex;
+	flex-direction: row;
+}
+
+.box_buttons button
+{
+	margin: 15px 10px 0px 0px;
+}
+
+.box_buttons button:last-child
+{
+	margin-right: 0px;
+}
+
+.boxitem.selectbox
+{
+	display: inline-flex;
+	align-items: center;
+	margin: 5px 20px 0px 0px;
+}
+
+.boxitem.selectbox:last-child
+{
+	margin-right: 0px;
+}
+
+.boxitem.selectbox label
+{
+	margin-right: 10px;
+	margin-bottom: 0px;
+}
+
+.boxitem.selectbox select
+{
+	background-color: rgba(0,0,0,0.25);
+	color: #fff;
+}
