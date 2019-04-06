@@ -1,0 +1,68 @@
+
+#bubbleWrapper
+{
+	overflow: hidden;
+	height: 500px;
+	transform: translateX(-70px) scale(1);
+	margin: 30px auto;
+}
+
+.stripe-bubbles
+{
+	position: relative;
+	background-color: white;
+}
+
+.stripe-bubble
+{
+	position: absolute;
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
+    background-image: url('https://www.stripe.com/img/v3/customers/logos/header-logos.png');
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.1);
+    background-size: 1076px 1076px;
+}
+
+.logo-imgAffirm { background-position: 0 -10px; }
+.logo-imgAllianz { background-position: -154px -10px; }
+.logo-imgAmazon { background-position: 0 -190px; }
+.logo-imgBlueApron { background-position: -154px -190px; }
+.logo-imgBookingCom { background-position: -308px -10px; }
+.logo-imgCatawiki { background-position: -308px -190px; }
+.logo-imgCityofBoston { background-position: 0 -369px; }
+.logo-imgDeliveroo { background-position: -154px -369px; }
+.logo-imgDiDi { background-position: -308px -369px; }
+.logo-imgDoordash { background-position: -462px -10px; }
+.logo-imgExpedia { background-position: -462px -190px; }
+.logo-imgFender { background-position: -462px -369px; }
+.logo-imgFitbit { background-position: 0 -551px; }
+.logo-imgGoogle { background-position: -154px -551px; }
+.logo-imgIndiegogo { background-position: -308px -551px; }
+.logo-imgInstacart { background-position: -462px -551px; }
+.logo-imgKickstarter { background-position: -616px -10px; }
+.logo-imgLyft { background-position: -616px -190px; }
+.logo-imgNasdaq { background-position: -616px -369px; }
+.logo-imgNat-Geo { background-position: -616px -551px; }
+.logo-imgOpenTable { background-position: 0 -730px; }
+.logo-imgPanic { background-position: -154px -730px; }
+.logo-imgPostmates { background-position: -308px -730px; }
+.logo-imgRackspace { background-position: -462px -730px; }
+.logo-imgReddit { background-position: -616px -730px; }
+.logo-imgSalesforce { background-position: -770px -10px; }
+.logo-imgShopify { background-position: -770px -190px; }
+.logo-imgSlack { background-position: -770px -369px; }
+.logo-imgSpotify { background-position: -770px -551px; }
+.logo-imgSquarespace { background-position: -770px -730px; }
+.logo-imgTarget { background-position: 0 -910px; }
+.logo-imgTaskRabbit { background-position: -154px -910px; }
+.logo-imgTed { background-position: -308px -910px; }
+.logo-imgTheGuardian { background-position: -462px -910px; }
+.logo-imgTicketSwap { background-position: -616px -910px; }
+.logo-imgTwitch { background-position: -770px -910px; }
+.logo-imgUber { background-position: -924px -10px; }
+.logo-imgWeTransfer { background-position: -924px -190px; }
+.logo-imgWish { background-position: -924px -369px; }
+.logo-imgXero { background-position: -924px -551px; }
+.logo-imgYelp { background-position: -924px -730px; }
+.logo-imgZillow { background-position: -924px -910px; }
