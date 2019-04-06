@@ -4,7 +4,7 @@
 	overflow: hidden;
 	height: 500px;
 	transform: translateX(-70px) scale(1);
-	margin: 30px auto;
+	margin: -30px auto 30px auto;
 }
 
 .stripe-bubbles
