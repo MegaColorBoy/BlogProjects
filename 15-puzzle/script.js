@@ -158,6 +158,7 @@ function cellEventHandle(e)
 
 }
 
+//Check if the game is over
 function is_game_over()
 {
 	var currentVal = 0;
@@ -176,6 +177,7 @@ function is_game_over()
 	return true;
 }
 
+//Shuffle the board
 function shuffleBoard()
 {
 	var shuffleLimit = 0;
@@ -206,12 +208,14 @@ function shuffleBoard()
 	}while(++shuffleLimit < 200);
 }
 
+//REstart the game
 function restart()
 {
 	shuffleBoard();
 	updateCells();
 }
 
+//Start the game
 function start()
 {
 	generateBoard();
