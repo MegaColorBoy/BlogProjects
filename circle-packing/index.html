@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Circle Packing</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="art"></canvas>
+</body>
+
+<script type="text/javascript">
+	// Return a random color
+	const getRandomColor = () => {
+		let letters = "0123456789ABCDEF".split('');
+		let color = "#";
+		for(let i=0; i<6; i++) {
+			color += letters[Math.floor(Math.random() * letters.length)];
+		}
+		return color;
+	}
+
+	// Generate a set of random colors
+	const generateColors = (colorRange) => {
+		let colors = [];
+		for(let i=0; i<colorRange; i++) {
+			colors[i] = getRandomColor();
+		}
+		return colors;
+	}
+
+	const circlePacking = () => {
+		let colors = generateColors(3);
+		let canvas = document.getElementById("art");
+		let context = canvas.getContext("2d");
+		let size = 480;
+		let width = size;
+		let height = size;
+		// let dpr = window.devicePixelRatio;
+
+		canvas.width = width;
+		canvas.height = height;
+		context.lineWidth = 2;
+
+		let circles = [];
+		let minRadius = 2;
+		let maxRadius = 100;
+		let totalCircles = width*2;
+		let attempts = size;
+
+		// Generate a valid circle
+		const generateCircle = () => {
+			let newCircle;
+			let isValidCircle = false;
+
+			for(let i=0; i<attempts; i++) {
+				newCircle = {
+					x: Math.floor(Math.random() * width),
+					y: Math.floor(Math.random() * width),
+					radius: minRadius
+				};
+
+				if(checkForCollision(newCircle)) {
+					continue;
+				}
+				else {
+					isValidCircle = true;
+					break;
+				}
+			}
+
+			if(!isValidCircle) { return; }
+
+			for(let i=minRadius; i<=maxRadius; i++) {
+				newCircle.radius = i;
+				if(checkForCollision(newCircle)) {
+					newCircle.radius--;
+					break;
+				}
+			}
+
+			circles.push(newCircle);
+			drawCircleOnCanvas(context, newCircle, colors[Math.floor(Math.random() * colors.length)]);
+		}
+
+		// Draw a circle on the canvas
+		const drawCircleOnCanvas = (context, circle, color) => {
+			context.beginPath();
+			context.arc(circle.x, circle.y, circle.radius, 0, 2*Math.PI);
+			context.fillStyle = color;
+			context.fill();
+			context.strokeStyle = "#FFFFFF";
+			context.stroke();
+		}
+
+		// Check for collision in a canvas
+		const checkForCollision = (newCircle) => {
+			
+			let x2 = newCircle.x;
+			let y2 = newCircle.y;
+			let r2 = newCircle.radius;
+
+			/*
+				Determine the euclidean distance between two circle
+				using Pythagorean Theorem.
+
+				Refer to: 
+				https://en.wikipedia.org/wiki/Euclidean_distance
+			*/
+			for(let i=0; i<circles.length; i++) {
+
+				let otherCircle = circles[i];
+				let r1 = otherCircle.radius;
+				let x1 = otherCircle.x;
+				let y1 = otherCircle.y;
+				let xx = ((x2 - x1) * (x2 - x1));
+				let yy = ((y2 - y1) * (y2 - y1));
+				let radii = r2 + r1;
+				let euclidDistance = Math.sqrt(xx + yy);
+
+				if(radii >= euclidDistance) {
+					return true;
+				}
+			}
+
+			// Check collision on top
+			if(x2 + r2 >= width || 
+				x2 - r2 <= 0) {
+				return true;
+			}
+
+			// Check collision on bottom
+			if(y2 + r2 >= width || 
+				y2 - r2 <= 0) {
+				return true;
+			}
+
+			//else return false
+			return false;
+		}
+
+		for(let i=0; i<totalCircles; i++) {
+			generateCircle();
+		}
+	};
+
+	circlePacking();
+</script>
+
+</html>
